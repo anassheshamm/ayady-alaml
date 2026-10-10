@@ -22,7 +22,7 @@ const menu = [
 
 const AdminLayout = () => {
   return (
-    <div dir="ltr" className="min-h-screen bg-[#FCFEFD]">
+    <div dir="ltr" className="min-h-screen bg-[#FFFFFF]">
       <div className="flex">
         {/* Main Content */}
         <main className="flex-1 px-10 py-8">

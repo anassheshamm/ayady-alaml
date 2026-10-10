@@ -14,7 +14,7 @@ const ExportModal = ({ isOpen, onClose }) => {
         title: "تنبيه",
         text: "يرجى تحديد تاريخ البداية والنهاية",
         icon: "warning",
-        confirmButtonColor: "#247C5A",
+        confirmButtonColor: "#222062",
         customClass: { popup: "font-['Cairo']" },
       });
       return;
@@ -45,7 +45,7 @@ const ExportModal = ({ isOpen, onClose }) => {
         title: "خطأ",
         text: "فشل في تصدير التقرير، تأكد من صلاحياتك.",
         icon: "error",
-        confirmButtonColor: "#4FA0B7",
+        confirmButtonColor: "#222062",
         customClass: { popup: "font-['Cairo']" },
       });
     } finally {
@@ -59,7 +59,7 @@ const ExportModal = ({ isOpen, onClose }) => {
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 font-['Cairo']" dir="rtl">
       <div className="w-full max-w-md rounded-2xl bg-white p-6 shadow-xl">
         <div className="mb-4 flex items-center justify-between">
-          <h2 className="text-xl font-bold text-[#111827]">تصدير تقرير Excel</h2>
+          <h2 className="text-xl font-bold text-[#222062]">تصدير تقرير Excel</h2>
           <button onClick={onClose} className="text-gray-400 hover:text-gray-600">
             <X size={24} />
           </button>
@@ -72,7 +72,7 @@ const ExportModal = ({ isOpen, onClose }) => {
               type="date"
               value={from}
               onChange={(e) => setFrom(e.target.value)}
-              className="w-full rounded-xl border border-gray-300 px-4 py-3 outline-none focus:border-[#4FA0B7]"
+              className="w-full rounded-xl border border-gray-300 px-4 py-3 outline-none focus:border-[#222062]"
             />
           </div>
           <div>
@@ -81,7 +81,7 @@ const ExportModal = ({ isOpen, onClose }) => {
               type="date"
               value={to}
               onChange={(e) => setTo(e.target.value)}
-              className="w-full rounded-xl border border-gray-300 px-4 py-3 outline-none focus:border-[#4FA0B7]"
+              className="w-full rounded-xl border border-gray-300 px-4 py-3 outline-none focus:border-[#222062]"
             />
           </div>
         </div>
@@ -89,7 +89,7 @@ const ExportModal = ({ isOpen, onClose }) => {
         <button
           onClick={handleExport}
           disabled={exporting}
-          className="flex w-full items-center justify-center gap-2 rounded-xl bg-[#4FA0B7] py-3 font-bold text-white transition hover:bg-[#4FA0B7]/90 disabled:opacity-70"
+          className="flex w-full items-center justify-center gap-2 rounded-xl bg-[#222062] py-3 font-bold text-white transition hover:bg-[#222062]/90 disabled:opacity-70"
         >
           {exporting ? <Loader2 className="animate-spin" size={20} /> : "تصدير"}
         </button>

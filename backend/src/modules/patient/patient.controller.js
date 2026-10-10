@@ -25,7 +25,8 @@ async getAll(req, res, next) {
       req.user,
       req.query.search,
       req.query.page || 1,
-      req.query.limit || 15
+      req.query.limit || 15,
+      req.query.programName
     );
 
     return res.status(200).json({

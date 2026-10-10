@@ -8,8 +8,8 @@ const HeadRow = ({ head }) => {
     .join(" ");
 
   return (
-    <tr className="bg-white shadow-sm transition hover:bg-[#FAFCFB]">
-      <td className="rounded-r-2xl px-6 py-5 font-medium text-[#2F2F2F]">
+    <tr className="bg-white shadow-sm transition hover:bg-[#F5F7EC]">
+      <td className="rounded-r-2xl px-6 py-5 font-medium text-[#222062]">
         {fullName || "غير محدد"}
       </td>
 
@@ -29,7 +29,7 @@ const HeadRow = ({ head }) => {
         <div className="flex justify-center">
           <Link
             to={`/admin/heads/${head._id}`}
-            className="flex items-center gap-2 rounded-xl px-4 py-2 text-[#35C759] transition hover:bg-[#EDF8F2]"
+            className="flex items-center gap-2 rounded-xl px-4 py-2 text-[#9EC73A] transition hover:bg-[#F5F7EC]"
           >
             <Eye size={18} />
             <span className="font-medium">معاينة</span>

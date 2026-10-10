@@ -20,7 +20,7 @@ const Select = forwardRef(({ label, icon, options = [], error, className = "", .
             ${
               error
                 ? "border-red-500 focus:border-red-500 focus:ring-red-500/10"
-                : "border-gray-300 focus:border-[#35C759] focus:ring-[#35C759]/10"
+                : "border-gray-300 focus:border-[#222062] focus:ring-[#222062]/10"
             }
             focus:ring-2
             ${className}

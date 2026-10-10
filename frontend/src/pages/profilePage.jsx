@@ -45,7 +45,7 @@ const ProfilePage = () => {
           title: "خطأ",
           text: error?.response?.data?.message || "فشل في تحميل بيانات الملف الشخصي",
           icon: "error",
-          confirmButtonColor: "#35C759",
+          confirmButtonColor: "#9EC73A",
           confirmButtonText: "حسناً",
           customClass: { popup: "font-['Cairo']" },
         });
@@ -59,8 +59,8 @@ const ProfilePage = () => {
 
   if (loading) {
     return (
-      <div className="flex min-h-screen items-center justify-center bg-[#FCFEFD] font-['Cairo']">
-        <div className="flex flex-col items-center gap-4 text-[#4FA0B7]">
+      <div className="flex min-h-screen items-center justify-center bg-[#FFFFFF] font-['Cairo']">
+        <div className="flex flex-col items-center gap-4 text-[#222062]">
           <Loader2 className="h-10 w-10 animate-spin" />
           <p className="text-lg font-semibold">جاري تحميل الملف الشخصي...</p>
         </div>
@@ -71,7 +71,7 @@ const ProfilePage = () => {
   return (
     <main
       dir="rtl"
-      className="min-h-screen bg-[#FCFEFD] px-10 py-10 font-['Cairo',sans-serif] text-[15px] leading-[1.9] text-[#27343A]"
+      className="min-h-screen bg-[#FFFFFF] px-10 py-10 font-['Cairo',sans-serif] text-[15px] leading-[1.9] text-[#222062]"
     >
       <div className="mx-auto max-w-[1500px]">
         <BackButton showHome />
@@ -79,7 +79,7 @@ const ProfilePage = () => {
         {/* ================= HEADER ================= */}
         <div className="mb-12 mt-6 flex items-start justify-between">
           <div>
-            <h1 className="text-5xl font-bold text-[#111827]">
+            <h1 className="text-5xl font-bold text-[#222062]">
               الملف الشخصي
             </h1>
             <p className="mt-3 text-lg text-gray-500">
@@ -91,10 +91,10 @@ const ProfilePage = () => {
         {/* ================= PERSONAL INFORMATION ================= */}
         <section className="mb-16">
           <div className="mb-8 flex items-center gap-3">
-            <div className="rounded-xl bg-[#4FA0B7]/30 p-3">
-              <span className="text-xl font-bold text-[#4FA0B7]">01</span>
+            <div className="rounded-xl bg-[#222062]/30 p-3">
+              <span className="text-xl font-bold text-[#222062]">01</span>
             </div>
-            <h2 className="text-3xl font-bold text-[#111827]">
+            <h2 className="text-3xl font-bold text-[#222062]">
               التعريف الشخصي
             </h2>
           </div>
@@ -161,10 +161,10 @@ const ProfilePage = () => {
         {/* ================= CONTACT & ACCOUNT DETAILS ================= */}
         <section className="mb-16">
           <div className="mb-8 flex items-center gap-3">
-            <div className="rounded-xl bg-[#4FA0B7]/30 p-3">
-              <span className="text-xl font-bold text-[#4FA0B7]">02</span>
+            <div className="rounded-xl bg-[#222062]/30 p-3">
+              <span className="text-xl font-bold text-[#222062]">02</span>
             </div>
-            <h2 className="text-3xl font-bold text-[#111827]">
+            <h2 className="text-3xl font-bold text-[#222062]">
               معلومات التواصل وبيانات الحساب
             </h2>
           </div>

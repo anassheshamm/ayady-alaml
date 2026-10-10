@@ -59,6 +59,7 @@ const patientService = {
       emergencyContactRelation: form.emergencyContactRelation,
       email: form.email,
       address: form.address,
+      programName: form.programName,
     };
 
     console.log("Patient Payload:", payload);
@@ -87,6 +88,7 @@ const patientService = {
       emergencyContactRelation: form.emergencyContactRelation,
       email: form.email,
       address: form.address,
+      programName: form.programName,
     };
 
     const response = await api.patch(`/patients/${id}`, payload);

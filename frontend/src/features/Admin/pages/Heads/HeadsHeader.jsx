@@ -9,7 +9,7 @@ const HeadsHeader = ({ onDownload }) => {
 
       <div className="flex items-start justify-between">
         <div>
-          <h1 className="text-5xl font-bold text-[#1F2937]">
+          <h1 className="text-5xl font-bold text-[#222062]">
             لائحة رؤساء الأقسام
           </h1>
 
@@ -21,7 +21,7 @@ const HeadsHeader = ({ onDownload }) => {
         <button
           onClick={onDownload}
           type="button"
-          className="flex items-center gap-2 rounded-xl bg-[#247C5A] px-6 py-3 text-white transition hover:bg-[#1F6D4E]"
+          className="flex items-center gap-2 rounded-xl bg-[#222062] px-6 py-3 text-white transition hover:bg-[#1b1950]"
         >
           <Download size={18} />
           تنزيل اللائحة
@@ -29,7 +29,7 @@ const HeadsHeader = ({ onDownload }) => {
         
       </div>
 
-      <div className="mt-8 h-px bg-[#E5EFE9]" />
+      <div className="mt-8 h-px bg-[#E7E9F0]" />
     </>
   );
 };

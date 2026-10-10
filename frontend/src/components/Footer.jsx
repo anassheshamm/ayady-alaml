@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <footer 
       dir="rtl" 
-      className="mt-auto w-full border-t border-[#E7F0EB] bg-[#FCFEFD] py-8"
+      className="mt-auto w-full border-t border-[#E7E9F0] bg-[#FFFFFF] py-8"
     >
       {/* flex-col stacks the items vertically, items-center centers them horizontally */}
       <div className="mx-auto flex w-full max-w-[1300px] flex-col items-center justify-center gap-5 px-8">

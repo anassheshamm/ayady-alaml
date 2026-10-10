@@ -9,6 +9,7 @@ import {
 import { useNavigate ,useParams} from "react-router-dom";
 import BackButton from "../components/BackButton";
 import patientService from "../../services/patient.service";
+import { PROGRAMS } from "../../constants/programs";
 
 const CreatePatientPage = () => {
   const navigate = useNavigate();
@@ -47,6 +48,7 @@ const CreatePatientPage = () => {
     email: "",
 
     address: "",
+    programName: "",
   });
 
   const handleChange = (e) => {
@@ -92,6 +94,7 @@ const CreatePatientPage = () => {
           patient.emergencyContactRelation || "",
         email: patient.email || "",
         address: patient.address || "",
+        programName: patient.programName || "",
       });
     } catch (err) {
       console.error(err);
@@ -174,7 +177,7 @@ const CreatePatientPage = () => {
   return (
     <main
       dir="rtl"
-      className="min-h-screen bg-[#FCFEFD] px-10 py-10"
+      className="min-h-screen bg-[#FFFFFF] px-10 py-10"
     >
       <div className="mx-auto max-w-[1500px]">
 
@@ -184,7 +187,7 @@ const CreatePatientPage = () => {
 
         <div className="mb-14">
 
-          <h1 className="text-5xl font-bold text-[#111827]">
+          <h1 className="text-5xl font-bold text-[#222062]">
 {isEdit ? "تعديل بيانات المستفيد" : "إضافة مستفيد جديد"}          </h1>
 
           <p className="mt-3 text-lg text-gray-500">
@@ -210,10 +213,10 @@ const CreatePatientPage = () => {
 
             <div className="mb-8 flex items-center gap-3">
 
-              <div className="rounded-xl bg-[#4FA0B7]/30 p-3">
+              <div className="rounded-xl bg-[#222062]/30 p-3">
                 <User
                   size={24}
-                  className="text-[#4FA0B7]"
+                  className="text-[#222062]"
                 />
               </div>
 
@@ -224,6 +227,8 @@ const CreatePatientPage = () => {
             </div>
 
             <div className="grid grid-cols-3 gap-6">
+
+          
 
               {/* First Name */}
 
@@ -248,7 +253,7 @@ const CreatePatientPage = () => {
                     px-4
                     text-right
                     outline-none
-                    focus:border-[#4FA0B7]
+                    focus:border-[#222062]
                   "
                 />
 
@@ -277,7 +282,7 @@ const CreatePatientPage = () => {
                     px-4
                     text-right
                     outline-none
-                    focus:border-[#4FA0B7]
+                    focus:border-[#222062]
                   "
                 />
 
@@ -306,10 +311,23 @@ const CreatePatientPage = () => {
                     px-4
                     text-right
                     outline-none
-                    focus:border-[#4FA0B7]
+                    focus:border-[#222062]
                   "
                 />
 
+              </div>
+                  <div>
+                <label className="mb-2 block font-medium">البرنامج</label>
+                <select
+                  name="programName"
+                  value={form.programName}
+                  onChange={handleChange}
+                  required
+                  className="h-14 w-full rounded-xl border border-gray-300 px-4 text-right outline-none focus:border-[#222062]"
+                >
+                  <option value="">اختر البرنامج...</option>
+                  {PROGRAMS.map((program) => <option key={program} value={program}>{program}</option>)}
+                </select>
               </div>
 
               {/* National ID */}
@@ -335,7 +353,7 @@ const CreatePatientPage = () => {
                     px-4
                     text-right
                     outline-none
-                    focus:border-[#4FA0B7]
+                    focus:border-[#222062]
                   "
                 />
 
@@ -362,7 +380,7 @@ const CreatePatientPage = () => {
                     bg-white
                     px-4
                     outline-none
-                    focus:border-[#4FA0B7]
+                    focus:border-[#222062]
                   "
                 >
                   <option value="">
@@ -411,7 +429,7 @@ const CreatePatientPage = () => {
                       pr-4
                       pl-12
                       outline-none
-                      focus:border-[#4FA0B7]
+                      focus:border-[#222062]
                     "
                   />
 
@@ -448,7 +466,7 @@ const CreatePatientPage = () => {
                       pr-4
                       pl-12
                       outline-none
-                      focus:border-[#4FA0B7]
+                      focus:border-[#222062]
                     "
                   />
 
@@ -478,7 +496,7 @@ const CreatePatientPage = () => {
                     border-gray-300
                     px-4
                     outline-none
-                    focus:border-[#4FA0B7]
+                    focus:border-[#222062]
                   "
                 />
 
@@ -505,7 +523,7 @@ const CreatePatientPage = () => {
                     bg-white
                     px-4
                     outline-none
-                    focus:border-[#4FA0B7]
+                    focus:border-[#222062]
                   "
                 >
                   <option value="">
@@ -543,10 +561,10 @@ const CreatePatientPage = () => {
 
             <div className="mb-8 flex items-center gap-3">
 
-              <div className="rounded-xl bg-[#4FA0B7]/30 p-3">
+              <div className="rounded-xl bg-[#222062]/30 p-3">
                 <Phone
                   size={24}
-                  className="text-[#4FA0B7]"
+                  className="text-[#222062]"
                 />
               </div>
 
@@ -581,7 +599,7 @@ const CreatePatientPage = () => {
                     px-4
                     text-right
                     outline-none
-                    focus:border-[#4FA0B7]
+                    focus:border-[#222062]
                   "
                 />
 
@@ -610,7 +628,7 @@ const CreatePatientPage = () => {
                     px-4
                     text-right
                     outline-none
-                    focus:border-[#4FA0B7]
+                    focus:border-[#222062]
                   "
                 />
 
@@ -639,7 +657,7 @@ const CreatePatientPage = () => {
                     px-4
                     text-right
                     outline-none
-                    focus:border-[#4FA0B7]
+                    focus:border-[#222062]
                   "
                 />
 
@@ -668,7 +686,7 @@ const CreatePatientPage = () => {
                     px-4
                     text-right
                     outline-none
-                    focus:border-[#4FA0B7]
+                    focus:border-[#222062]
                   "
                 />
 
@@ -696,7 +714,7 @@ const CreatePatientPage = () => {
                     px-4
                     text-right
                     outline-none
-                    focus:border-[#4FA0B7]
+                    focus:border-[#222062]
                   "
                 >
                   <option value="">
@@ -776,7 +794,7 @@ const CreatePatientPage = () => {
                       pl-12
                       text-right
                       outline-none
-                      focus:border-[#4FA0B7]
+                      focus:border-[#222062]
                     "
                   />
 
@@ -799,14 +817,14 @@ const CreatePatientPage = () => {
     disabled={loading}
     className="
       rounded-xl
-      bg-[#4FA0B7]
+      bg-[#222062]
       px-8
       py-4
       text-lg
       font-semibold
       text-white
       transition
-      hover:bg-[#4FA0B7]/60
+      hover:bg-[#222062]/60
       disabled:cursor-not-allowed
       disabled:opacity-60
     "
@@ -822,14 +840,14 @@ const CreatePatientPage = () => {
       className="
         rounded-xl
         border
-        border-[#4FA0B7]
+        border-[#222062]
         px-8
         py-4
         text-lg
         font-semibold
-        text-[#4FA0B7]
+        text-[#222062]
         transition
-        hover:bg-[#4FA0B7]/10
+        hover:bg-[#222062]/10
         disabled:cursor-not-allowed
         disabled:opacity-60
       "

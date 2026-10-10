@@ -1,7 +1,7 @@
 export default function PageHeader() {
   return (
     <div className="space-y-2 text-center">
-      <h1 className="text-5xl font-bold text-[#1D2746]">
+      <h1 className="text-5xl font-bold text-[#222062]">
         إنشاء حساب جديد
       </h1>
 

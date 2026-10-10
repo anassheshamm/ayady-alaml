@@ -50,7 +50,7 @@ const PasswordInput = forwardRef(
               w-full
               rounded-2xl
               border
-              border-[#D7E3F4]
+              border-[#E7E9F0]
               bg-white
               pr-14
               pl-14
@@ -60,9 +60,9 @@ const PasswordInput = forwardRef(
               outline-none
               transition-all
               duration-200
-              focus:border-[#4FA0B7]
+              focus:border-[#222062]
               focus:ring-4
-              focus:ring-[#4FA0B7]/10
+              focus:ring-[#222062]/10
               ${className}
             `}
             {...props}
@@ -80,7 +80,7 @@ const PasswordInput = forwardRef(
               -translate-y-1/2
               text-slate-400
               transition
-              hover:text-[#35C759]
+              hover:text-[#222062]
             "
           >
             {showPassword ? (

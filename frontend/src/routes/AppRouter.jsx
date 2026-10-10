@@ -35,7 +35,7 @@ import Footer from "../components/Footer";
 export default function AppRouter() {
   return (
     // Wrap the entire app in a min-h-screen flex column layout
-    <div className="flex min-h-screen flex-col bg-[#FCFEFD]">
+    <div className="flex min-h-screen flex-col bg-[#FFFFFF]">
       
       {/* This flex-1 container holds the main content and pushes the footer down */}
       <div className="flex flex-1 flex-col">

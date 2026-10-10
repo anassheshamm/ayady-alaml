@@ -19,7 +19,7 @@ const PatientsTable = ({ patients: initialPatients = [] }) => {
     <div className="overflow-hidden rounded-[28px] bg-white shadow-sm">
       <table dir="rtl" className="w-full border-separate border-spacing-y-4">
         <thead>
-          <tr className="bg-[#4FA0B7]/30 text-[#2F2F2F]">
+          <tr className="bg-[#9EC73A]/30 text-[#222062]">
             <th className="rounded-r-2xl px-6 py-5 text-right font-semibold">
               الاسم
             </th>

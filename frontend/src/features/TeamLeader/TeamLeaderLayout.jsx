@@ -3,7 +3,7 @@ import TeamLeaderSidebar from "./TeamLeaderSidebar";
 
 const TeamLeaderLayout = () => {
   return (
-    <div className="min-h-screen bg-[#FCFEFD]" dir="rtl">
+    <div className="min-h-screen bg-[#FFFFFF]" dir="rtl">
       <div className="flex">
         <TeamLeaderSidebar />
         <main className="flex-1 px-10 py-8">

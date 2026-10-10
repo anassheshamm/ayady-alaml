@@ -100,7 +100,7 @@ const basePath = location.pathname.startsWith("/admin")
       icon: "warning",
       showCancelButton: true,
       confirmButtonColor: "#d33",
-      cancelButtonColor: "#35C759",
+      cancelButtonColor: "#9EC73A",
       confirmButtonText: "نعم، احذف المستفيد",
       cancelButtonText: "إلغاء",
       customClass: { popup: "font-['Cairo']" },
@@ -115,7 +115,7 @@ const basePath = location.pathname.startsWith("/admin")
           title: "تم الحذف!",
           text: "تم حذف بيانات المستفيد بنجاح.",
           icon: "success",
-          confirmButtonColor: "#35C759",
+          confirmButtonColor: "#9EC73A",
           confirmButtonText: "حسناً",
           customClass: { popup: "font-['Cairo']" },
         });
@@ -127,7 +127,7 @@ const basePath = location.pathname.startsWith("/admin")
           title: "خطأ!",
           text: err.response?.data?.message || "حدث خطأ أثناء محاولة حذف المستفيد.",
           icon: "error",
-          confirmButtonColor: "#35C759",
+          confirmButtonColor: "#9EC73A",
           confirmButtonText: "حسناً",
           customClass: { popup: "font-['Cairo']" },
         });
@@ -139,8 +139,8 @@ const basePath = location.pathname.startsWith("/admin")
 
   if (loading) {
     return (
-      <div className="flex min-h-screen items-center justify-center bg-[#FCFEFD]">
-        <div className="flex flex-col items-center gap-4 text-[#4FA0B7]">
+      <div className="flex min-h-screen items-center justify-center bg-[#FFFFFF]">
+        <div className="flex flex-col items-center gap-4 text-[#222062]">
           <Loader2 className="h-10 w-10 animate-spin" />
           <p className="text-lg font-semibold">
             جاري تحميل بيانات المستفيد...
@@ -152,7 +152,7 @@ const basePath = location.pathname.startsWith("/admin")
 
   if (error || !patient) {
     return (
-      <div className="flex min-h-screen flex-col items-center justify-center bg-[#FCFEFD]">
+      <div className="flex min-h-screen flex-col items-center justify-center bg-[#FFFFFF]">
 
         <p className="mb-6 text-xl font-semibold text-red-600">
           {error}
@@ -162,7 +162,7 @@ const basePath = location.pathname.startsWith("/admin")
           onClick={() =>
             navigate("/doctor/patients")
           }
-          className="rounded-xl bg-[#4FA0B7] px-6 py-3 font-semibold text-white"
+          className="rounded-xl bg-[#222062] px-6 py-3 font-semibold text-white"
         >
           العودة للمستفيدين
         </button>
@@ -174,7 +174,7 @@ const basePath = location.pathname.startsWith("/admin")
   return (
     <main
       dir="rtl"
-      className="min-h-screen bg-[#FCFEFD] px-10 py-10"
+      className="min-h-screen bg-[#FFFFFF] px-10 py-10"
     >
       <div className="mx-auto max-w-[1500px]">
 <BackButton showHome />
@@ -188,7 +188,7 @@ const basePath = location.pathname.startsWith("/admin")
 
           <div>
 
-            <h1 className="text-5xl font-bold text-[#111827]">
+            <h1 className="text-5xl font-bold text-[#222062]">
               ملف المستفيد
             </h1>
 
@@ -204,7 +204,7 @@ const basePath = location.pathname.startsWith("/admin")
       onClick={() =>
         navigate(`/doctor/edit-patient/${patient._id}`)
       }
-      className="flex items-center gap-2 rounded-xl bg-[#4FA0B7] px-7 py-4 font-semibold text-white transition hover:bg-[#4FA0B7]/60"
+      className="flex items-center gap-2 rounded-xl bg-[#222062] px-7 py-4 font-semibold text-white transition hover:bg-[#222062]/60"
     >
       <Pencil size={18} />
       تعديل المعلومات
@@ -222,10 +222,10 @@ const basePath = location.pathname.startsWith("/admin")
 
           <div className="mb-8 flex items-center gap-3">
 
-            <div className="rounded-xl bg-[#4FA0B7]/30 p-3">
+            <div className="rounded-xl bg-[#9EC73A]/30 p-3">
               <User
                 size={24}
-                className="text-[#4FA0B7]"
+                className="text-[#222062]"
               />
             </div>
 
@@ -401,10 +401,10 @@ const basePath = location.pathname.startsWith("/admin")
 
           <div className="mb-8 flex items-center gap-3">
 
-            <div className="rounded-xl bg-[#4FA0B7]/30 p-3">
+            <div className="rounded-xl bg-[#9EC73A]/30 p-3">
               <Phone
                 size={24}
-                className="text-[#4FA0B7]"
+                className="text-[#222062]"
               />
             </div>
 
@@ -524,10 +524,10 @@ const basePath = location.pathname.startsWith("/admin")
         <section className="mb-20">
           <div className="mb-8 flex items-center justify-between">
             <div className="flex items-center gap-3">
-              <div className="rounded-xl bg-[#4FA0B7]/30 p-3">
+              <div className="rounded-xl bg-[#9EC73A]/30 p-3">
                 <FileText
                   size={24}
-                  className="text-[#4FA0B7]"
+                  className="text-[#222062]"
                 />
               </div>
               <div>
@@ -538,7 +538,7 @@ const basePath = location.pathname.startsWith("/admin")
             {user?.role === "doctor" && (
   <button
     onClick={() => setIsReportModalOpen(true)}
-    className="flex items-center gap-2 rounded-xl bg-[#4FA0B7] px-6 py-3 font-semibold text-white transition hover:bg-[#4FA0B7]/60"
+    className="flex items-center gap-2 rounded-xl bg-[#222062] px-6 py-3 font-semibold text-white transition hover:bg-[#222062]/60"
   >
     <Plus size={18} /> إضافة تقرير
   </button>
@@ -547,7 +547,7 @@ const basePath = location.pathname.startsWith("/admin")
 
           <div className="overflow-hidden rounded-2xl border border-gray-200 bg-white">
             <table className="w-full">
-              <thead className="bg-[#F8FAFC]">
+              <thead className="bg-[#9EC73A]/30">
                 <tr className="text-right">
                   <th className="px-8 py-5">نوع التقرير</th>
                   <th className="px-8 py-5">اسم البرنامج</th>
@@ -561,7 +561,7 @@ const basePath = location.pathname.startsWith("/admin")
                 {allReports.length > 0 ? (
                   allReports.map((report) => (
                     <tr key={report._id} className="border-t">
-                      <td className="px-8 py-6 font-bold text-[#4FA0B7]">
+                      <td className="px-8 py-6 font-bold text-[#222062]">
                         {report.reportType}
                       </td>
                       <td className="px-8 py-6">
@@ -596,9 +596,9 @@ const basePath = location.pathname.startsWith("/admin")
                         <div className="flex justify-center">
                           <button
                             onClick={() => navigate(report.viewLink)}
-                            className="rounded-lg bg-[#EDF8F2] p-2 transition hover:bg-[#DDF4E5]"
+                            className="rounded-lg bg-[#F5F7EC] p-2 transition hover:bg-[#F5F7EC]"
                           >
-                            <Eye size={18} className="text-[#247C5A]" />
+                            <Eye size={18} className="text-[#222062]" />
                           </button>
                         </div>
                       </td>
@@ -636,7 +636,7 @@ const basePath = location.pathname.startsWith("/admin")
               <X size={20} />
             </button>
 
-            <h2 className="mb-3 text-center text-3xl font-bold text-[#111827]">
+            <h2 className="mb-3 text-center text-3xl font-bold text-[#222062]">
               إضافة تقرير جديد
             </h2>
 
@@ -663,18 +663,18 @@ const basePath = location.pathname.startsWith("/admin")
     justify-center
     rounded-2xl
     border
-    border-[#4FA0B7]
-    bg-[#4FA0B7]/20
+    border-[#222062]
+    bg-[#222062]/20
     transition
     hover:scale-105
   "
 >
   <FileText
     size={40}
-    className="mb-4 text-[#4FA0B7]"
+    className="mb-4 text-[#222062]"
   />
 
-  <span className="text-xl font-bold text-[#4FA0B7]">
+  <span className="text-xl font-bold text-[#222062]">
     التقرير القبلي
   </span>
 </button>
@@ -697,8 +697,8 @@ const basePath = location.pathname.startsWith("/admin")
                   justify-center
                   rounded-2xl
                   border
-                  border-[#4FA0B7]
-                  bg-[#4FA0B7]/20
+                  border-[#222062]
+                  bg-[#222062]/20
                   transition
                   hover:scale-105
                 "
@@ -706,10 +706,10 @@ const basePath = location.pathname.startsWith("/admin")
 
                 <FileText
                   size={40}
-                  className="mb-4 text-[#4FA0B7]"
+                  className="mb-4 text-[#222062]"
                 />
 
-                <span className="text-xl font-bold text-[#4FA0B7]">
+                <span className="text-xl font-bold text-[#222062]">
                   التقرير البعدي
                 </span>
 

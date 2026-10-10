@@ -5,7 +5,7 @@
 //   const [search, setSearch] = useState("");
 
 //   return (
-//     <div className="rounded-[28px] border border-[#E8F2EC] bg-white p-6 shadow-sm">
+//     <div className="rounded-[28px] border border-[#E7E9F0] bg-white p-6 shadow-sm">
 
 //       {/* Create Patient */}
 
@@ -19,12 +19,12 @@
 //           justify-center
 //           gap-2
 //           rounded-2xl
-//           bg-[#35C759]
+//           bg-[#9EC73A]
 //           text-lg
 //           font-semibold
 //           text-white
 //           transition
-//           hover:bg-[#2FB350]
+//           hover:bg-[#7fa12e]
 //         "
 //       >
 //         <Plus size={22} />
@@ -56,14 +56,14 @@
 //             h-12
 //             w-full
 //             rounded-xl
-//             bg-[#F4F7F5]
+//             bg-[#F5F7EC]
 //             pr-12
 //             pl-4
 //             text-right
 //             outline-none
 //             placeholder:text-gray-500
 //             focus:ring-2
-//             focus:ring-[#247C5A]/10
+//             focus:ring-[#222062]/10
 //           "
 //         />
 
@@ -82,11 +82,11 @@
 //           gap-2
 //           rounded-xl
 //           border
-//           border-[#35C759]
-//           text-[#247C5A]
+//           border-[#9EC73A]
+//           text-[#222062]
 //           font-semibold
 //           transition
-//           hover:bg-[#EDF8F2]
+//           hover:bg-[#F5F7EC]
 //         "
 //       >
 //         <Plus size={18} />

@@ -31,8 +31,8 @@ const PatientRow = ({ patient }) => {
   };
 
   return (
-    <tr className="overflow-hidden rounded-2xl bg-white shadow-sm transition hover:bg-[#FAFCFB]">
-      <td className="rounded-r-2xl px-6 py-5 text-right font-medium text-[#2F2F2F]">
+    <tr className="overflow-hidden rounded-2xl bg-white shadow-sm transition hover:bg-[#F5F7EC]">
+      <td className="rounded-r-2xl px-6 py-5 text-right font-medium text-[#222062]">
         {fullName || "غير محدد"}
       </td>
 
@@ -50,7 +50,7 @@ const PatientRow = ({ patient }) => {
         {patient.email || "-"}
       </td>
 
-      <td className="px-6 py-5 text-right font-medium text-[#2F2F2F]">
+      <td className="px-6 py-5 text-right font-medium text-[#222062]">
         {doctorName}
       </td>
       <td className="px-6 py-5 text-right">
@@ -60,7 +60,7 @@ const PatientRow = ({ patient }) => {
       <td className="rounded-l-2xl px-6 py-5">
         <div className="flex justify-center">
           <Link to={`/admin/patient/${patient._id}`}
-            className="flex items-center gap-2 rounded-xl px-4 py-2 text-[#35C759] transition hover:bg-[#EDF8F2]"
+            className="flex items-center gap-2 rounded-xl px-4 py-2 text-[#9EC73A] transition hover:bg-[#F5F7EC]"
           >
             <Eye size={18} />
             <span className="font-medium">معاينة</span>

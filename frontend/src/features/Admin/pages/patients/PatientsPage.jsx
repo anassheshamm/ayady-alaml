@@ -4,6 +4,7 @@ import PatientsHeader from "../../../components/PageHeader";
 import PatientsTable from "./PatientsTable";
 import { useSearch } from "../../../../context/SearchContext"; 
 import ExportModal from "../../../components/ExportModal";
+import { PROGRAMS } from "../../../../constants/programs";
 
 
 const PatientsPage = () => {
@@ -14,12 +15,13 @@ const PatientsPage = () => {
 
   const [page, setPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
+  const [programName, setProgramName] = useState("all");
 
   // 2. Get global search term
   const { searchTerm } = useSearch();
    useEffect(() => {
     setPage(1);
-  }, [searchTerm]);
+  }, [searchTerm, programName]);
 
   // 3. Re-fetch whenever searchTerm changes (with debounce)
   useEffect(() => {
@@ -28,7 +30,7 @@ const PatientsPage = () => {
     }, 500);
 
     return () => clearTimeout(delayDebounceFn);
-  }, [searchTerm, page]);
+  }, [searchTerm, page, programName]);
 
   const fetchPatients = async () => {
     try {
@@ -40,6 +42,7 @@ const PatientsPage = () => {
           search: searchTerm,
           page,
           limit: 15,
+          programName,
         },
       });
 
@@ -73,6 +76,36 @@ const PatientsPage = () => {
       />
 
       <div className="mt-10">
+      
+<div className="mb-6 flex flex-wrap items-center gap-3">
+  <label className="font-semibold text-[#222062]">
+    تصفية حسب البرنامج:
+  </label>
+
+  <div className="flex flex-wrap items-center gap-2">
+    {[
+      { value: "all", label: "الكل" },
+      ...PROGRAMS.map((program) => ({
+        value: program,
+        label: program,
+      })),
+    ].map((tab) => (
+      <button
+        key={tab.value}
+        type="button"
+        onClick={() => setProgramName(tab.value)}
+        className={`rounded-full border px-4 py-2 text-sm font-semibold transition-all duration-200 ${
+          programName === tab.value
+            ? "border-[#222062] bg-[#222062] text-white shadow-sm"
+            : "border-[#E7E9F0] bg-white text-[#222062] hover:border-[#9EC73A] hover:bg-[#F5F7EC]"
+        }`}
+      >
+        {tab.label}
+      </button>
+    ))}
+  </div>
+</div>
+
         {loading ? (
           <div className="py-20 text-center text-gray-500">جاري التحميل...</div>
         ) : error ? (

@@ -57,13 +57,13 @@ const DashboardPage = () => {
   if (loading && !data) {
     return (
       <div className="flex min-h-screen items-center justify-center">
-        <Loader2 className="h-10 w-10 animate-spin text-[#31778b]" />
+        <Loader2 className="h-10 w-10 animate-spin text-[#222062]" />
       </div>
     );
   }
 
   return (
-    <div dir="rtl" className="min-h-screen bg-[#F9FBFC] p-8 font-['Cairo']">
+    <div dir="rtl" className="min-h-screen bg-[#FFFFFF] p-8 font-['Cairo']">
       
       {/* Header Actions */}
       <div className="mb-6 flex items-center print:hidden">
@@ -83,7 +83,7 @@ const DashboardPage = () => {
               setActivePreset(null); // Clear preset if user picks custom date
               setDateRange(prev => ({ ...prev, from: e.target.value }));
             }}
-            className="rounded-xl border border-gray-200 px-4 py-2 outline-none focus:border-[#31778b]"
+            className="rounded-xl border border-gray-200 px-4 py-2 outline-none focus:border-[#222062]"
           />
           <input 
             type="date" 
@@ -92,31 +92,31 @@ const DashboardPage = () => {
               setActivePreset(null); // Clear preset if user picks custom date
               setDateRange(prev => ({ ...prev, to: e.target.value }));
             }}
-            className="rounded-xl border border-gray-200 px-4 py-2 outline-none focus:border-[#31778b]"
+            className="rounded-xl border border-gray-200 px-4 py-2 outline-none focus:border-[#222062]"
           />
         </div>
         <div className="flex gap-2 rounded-xl bg-white p-1 shadow-sm">
           <button 
             onClick={() => handlePresetChange(365)} 
-            className={`rounded-lg px-4 py-2 transition ${activePreset === 365 ? 'bg-[#E6F3FA] font-bold text-[#31778b]' : 'hover:bg-gray-100'}`}
+            className={`rounded-lg px-4 py-2 transition ${activePreset === 365 ? 'bg-[#E6F3FA] font-bold text-[#222062]' : 'hover:bg-gray-100'}`}
           >
             اخر سنه
           </button>
           <button 
             onClick={() => handlePresetChange(90)} 
-            className={`rounded-lg px-4 py-2 transition ${activePreset === 90 ? 'bg-[#E6F3FA] font-bold text-[#31778b]' : 'hover:bg-gray-100'}`}
+            className={`rounded-lg px-4 py-2 transition ${activePreset === 90 ? 'bg-[#E6F3FA] font-bold text-[#222062]' : 'hover:bg-gray-100'}`}
           >
             اخر ٩٠ يوم
           </button>
           <button 
             onClick={() => handlePresetChange(60)} 
-            className={`rounded-lg px-4 py-2 transition ${activePreset === 60 ? 'bg-[#E6F3FA] font-bold text-[#31778b]' : 'hover:bg-gray-100'}`}
+            className={`rounded-lg px-4 py-2 transition ${activePreset === 60 ? 'bg-[#E6F3FA] font-bold text-[#222062]' : 'hover:bg-gray-100'}`}
           >
             اخر ٦٠ يوم
           </button>
           <button 
             onClick={() => handlePresetChange(30)} 
-            className={`rounded-lg px-4 py-2 transition ${activePreset === 30 ? 'bg-[#E6F3FA] font-bold text-[#31778b]' : 'hover:bg-gray-100'}`}
+            className={`rounded-lg px-4 py-2 transition ${activePreset === 30 ? 'bg-[#E6F3FA] font-bold text-[#222062]' : 'hover:bg-gray-100'}`}
           >
             اخر ٣٠ يوم
           </button>
@@ -177,7 +177,7 @@ const DashboardPage = () => {
         {/* Left Column - Monthly Reports */}
         <div className="flex flex-col rounded-[20px] border border-gray-100 bg-white p-6 shadow-[0_2px_10px_rgba(0,0,0,0.02)] lg:col-span-8 lg:p-8">
           <div className="mb-8 text-right">
-            <h3 className="text-[20px] font-bold text-[#111827]">
+            <h3 className="text-[20px] font-bold text-[#222062]">
   التقارير والمستفيدون الجدد شهريًا
 </h3>
 
@@ -243,7 +243,7 @@ const DashboardPage = () => {
                 <Bar
   dataKey="reportCount"
   name="reportCount"
-  fill="#35C759"
+  fill="#9EC73A"
   radius={[4, 4, 0, 0]}
   barSize={24}
 />
@@ -251,7 +251,7 @@ const DashboardPage = () => {
 <Bar
   dataKey="newPatients"
   name="newPatients"
-  fill="#31778b"
+  fill="#222062"
   radius={[4, 4, 0, 0]}
   barSize={24}
 />
@@ -263,7 +263,7 @@ const DashboardPage = () => {
         {/* Right Column - Patients per Doctor */}
         <div className="flex flex-col rounded-[20px] border border-gray-100 bg-white p-6 shadow-[0_2px_10px_rgba(0,0,0,0.02)] lg:col-span-4 lg:p-8">
           <div className="mb-8 text-right">
-            <h3 className="text-[20px] font-bold text-[#111827]">عدد المرضى لكل معالج</h3>
+            <h3 className="text-[20px] font-bold text-[#222062]">عدد المرضى لكل معالج</h3>
             <p className="mt-1 text-[13px] text-[#8B98A5]">عدد المستفيدين المسجلين لكل معالج حتى نهاية الفترة</p>
           </div>
           <div className="flex flex-col gap-5">
@@ -281,13 +281,13 @@ const DashboardPage = () => {
                   {/* Progress Bar - Anchors Right, grows Left */}
                   <div className="flex h-[18px] flex-1 justify-start bg-transparent">
                     <div 
-                      className="h-full rounded-[4px] bg-[#35C759] transition-all duration-500" 
+                      className="h-full rounded-[4px] bg-[#9EC73A] transition-all duration-500" 
                       style={{ width: widthPct }} 
                     />
                   </div>
                   
                   {/* Count - Anchored Left */}
-                  <span className="w-8 text-left text-[15px] font-bold text-[#111827]">
+                  <span className="w-8 text-left text-[15px] font-bold text-[#222062]">
                     {doc.count}
                   </span>
                 </div>
@@ -301,7 +301,7 @@ const DashboardPage = () => {
       {/* Bottom Chart - Recovery Distribution */}
       <div className="flex flex-col rounded-[20px] border border-gray-100 bg-white p-6 shadow-[0_2px_10px_rgba(0,0,0,0.02)] lg:p-8">
         <div className="mb-8 text-right">
-          <h3 className="text-[20px] font-bold text-[#111827]">توزيع مدة التعافي</h3>
+          <h3 className="text-[20px] font-bold text-[#222062]">توزيع مدة التعافي</h3>
           <p className="mt-1 text-[13px] text-[#8B98A5]">عدد حالات التعافي مصنفاً حسب مدة التعافي بالأشهر</p>
         </div>
         <div className="h-[320px] w-full">
@@ -334,7 +334,7 @@ const DashboardPage = () => {
                 {data?.recoveryDurationDistribution?.map((entry, index) => (
                   <Cell 
                     key={`cell-${index}`} 
-                    fill={entry.month === 12 ? '#DE7815' : '#19B076'} 
+                    fill={entry.month === 12 ? '#DE7815' : '#9EC73A'} 
                   />
                 ))}
               </Bar>
@@ -355,7 +355,7 @@ const StatCard = ({ title, value }) => {
         {title}
       </h4>
 
-      <span className="text-[38px] font-extrabold tracking-tight text-[#111827]">
+      <span className="text-[38px] font-extrabold tracking-tight text-[#222062]">
         {value !== undefined && value !== null
           ? value.toLocaleString()
           : "0"}

@@ -56,6 +56,10 @@ body("nationalId")
   body("emergencyContactRelation").optional(),
 
   body("address").optional(),
+
+  body("programName")
+    .isIn(["منزل منتصف الطريق", "الرعايه اللاحقه"])
+    .withMessage("A valid program is required"),
 ];
 
 export const updatePatientValidation = [
@@ -122,6 +126,10 @@ export const updatePatientValidation = [
 
   body("address")
     .optional(),
+
+  body("programName")
+    .optional()
+    .isIn(["منزل منتصف الطريق", "الرعايه اللاحقه"]),
 ];
 
 export const updatePatientStatusValidation = [

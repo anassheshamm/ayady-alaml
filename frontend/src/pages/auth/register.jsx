@@ -106,7 +106,7 @@ export default function Register() {
   };
 
   return (
-    <main className="min-h-screen bg-[#F8FAFF] py-10" dir="rtl">
+    <main className="min-h-screen bg-[#FFFFFF] py-10" dir="rtl">
       <div className="mx-auto max-w-7xl px-8">
 
         <Logo />
@@ -257,7 +257,7 @@ export default function Register() {
             <Button
               type="submit"
               disabled={loading}
-              className="h-14 w-full bg-[#4FA0B7] md:w-1/2 rounded-2xl text-lg disabled:opacity-70 disabled:cursor-not-allowed"
+              className="h-14 w-full bg-[#222062] md:w-1/2 rounded-2xl text-lg disabled:opacity-70 disabled:cursor-not-allowed"
             >
               {loading ? "جاري إنشاء الحساب..." : "إنشاء الحساب"}
             </Button>

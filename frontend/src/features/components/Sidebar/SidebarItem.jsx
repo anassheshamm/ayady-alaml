@@ -12,8 +12,8 @@ const SidebarItem = ({ item, active, onClick }) => {
 
             ${
               isActive
-                ? "bg-[#4FA0B7] text-white shadow-sm"
-                : "bg-[#A9D3DF] text-gray-700 hover:bg-[#E6AB7B9]/30"
+                ? "bg-[#222062] text-white shadow-sm"
+                : "bg-[#ffff] text-gray-700 hover:bg-[#E6AB7B9]/30"
             }
           `
         }
@@ -34,7 +34,7 @@ const SidebarItem = ({ item, active, onClick }) => {
         ${
           active
             ? "bg-[rgb(106,183,185)] text-white shadow-sm"
-            : "bg-[#6AB7B9] text-gray-700 hover:bg-[#6AB7B9]/30"
+            : "bg-[#222062] text-gray-700 hover:bg-[#9EC73A]/30"
         }
       `}
     >

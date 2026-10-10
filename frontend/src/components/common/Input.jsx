@@ -30,7 +30,7 @@ const Input = forwardRef(
               w-full
               rounded-2xl
               border
-              border-[#D7E3F4]
+              border-[#E7E9F0]
               bg-white
               pr-14
               pl-4
@@ -40,9 +40,9 @@ const Input = forwardRef(
               transition-all
               duration-200
               outline-none
-              focus:border-[#4FA0B7]
+              focus:border-[#222062]
               focus:ring-4
-              focus:ring-[#4FA0B7]/10
+              focus:ring-[#222062]/10
               ${className}
             `}
             {...props}

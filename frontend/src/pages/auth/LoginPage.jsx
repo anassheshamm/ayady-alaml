@@ -104,7 +104,7 @@ const LoginPage = () => {
 
         {/* Title */}
 
-        <h1 className="text-center text-5xl font-bold text-[#111827]">
+        <h1 className="text-center text-5xl font-bold text-[#222062]">
           تسجيل الدخول
         </h1>
 
@@ -122,7 +122,7 @@ const LoginPage = () => {
           {/* Email */}
 
           <div>
-            <label className="mb-2 block text-lg font-medium text-[#1F2937]">
+            <label className="mb-2 block text-lg font-medium text-[#222062]">
               البريد الإلكتروني
             </label>
 
@@ -152,9 +152,9 @@ const LoginPage = () => {
                   outline-none
                   transition
                   placeholder:text-gray-400
-                  focus:border-[#4FA0B7]
+                  focus:border-[#222062]
                   focus:ring-2
-                  focus:ring-[#4FA0B7]/10
+                  focus:ring-[#222062]/10
                 "
               />
             </div>
@@ -163,7 +163,7 @@ const LoginPage = () => {
           {/* Password */}
 
           <div>
-            <label className="mb-2 block text-lg font-medium text-[#1F2937]">
+            <label className="mb-2 block text-lg font-medium text-[#222062]">
               كلمة المرور
             </label>
 
@@ -206,9 +206,9 @@ const LoginPage = () => {
                   outline-none
                   transition
                   placeholder:text-gray-400
-                  focus:border-[#4FA0B7]
+                  focus:border-[#222062]
                   focus:ring-2
-                  focus:ring-[#4FA0B7]/10
+                  focus:ring-[#222062]/10
                 "
               />
             </div>
@@ -223,7 +223,7 @@ const LoginPage = () => {
               className="
                 text-sm
                 font-medium
-                text-[#4FA0B7]
+                text-[#222062]
                 transition
                 hover:underline
               "
@@ -257,12 +257,12 @@ const LoginPage = () => {
               h-14
               w-full
               rounded-xl
-              bg-[#4FA0B7]
+              bg-[#222062]
               text-lg
               font-semibold
               text-white
               transition
-              hover:bg-[#4FA0B7]/60
+              hover:bg-[#222062]/60
               disabled:cursor-not-allowed
               disabled:bg-gray-300
             "

@@ -32,7 +32,7 @@ const PageHeader = ({
           <button
             onClick={() => navigate(`${basePath}/profile`)}
             title="الملف الشخصي"
-            className="flex h-16 w-16 items-center justify-center rounded-xl border border-gray-200 bg-white text-[#6AB7B9] shadow-sm transition hover:bg-[#6AB7B9]/10"
+            className="flex h-16 w-16 items-center justify-center rounded-xl border border-gray-200 bg-white text-[#222062] shadow-sm transition hover:bg-[#9EC73A]/10"
           >
             <User size={24} />
           </button>
@@ -42,11 +42,11 @@ const PageHeader = ({
       {/* Breadcrumb */}
 
       <div className="mb-16 mt-8 flex justify-center text-lg">
-        <span className="font-semibold text-[#1E1E1E]">
+        <span className="font-semibold text-[#222062]">
           الرئيسية
         </span>
 
-        <span className="mx-3 text-[#50A0B8]">{">"}</span>
+        <span className="mx-3 text-[#222062]">{">"}</span>
 
         <span className="text-gray-500">
           {title}
@@ -69,7 +69,7 @@ const PageHeader = ({
                 items-center
                 gap-2
                 rounded-xl
-                bg-[#6AB7B9]
+                bg-[#222062]
                 px-6
                 text-white
                 transition
@@ -85,7 +85,7 @@ const PageHeader = ({
         {/* Title */}
 
         <div className="text-right">
-          <h1 className="text-[44px] font-bold text-[#202020]">
+          <h1 className="text-[44px] font-bold text-[#222062]">
             {title}
           </h1>
 
@@ -98,7 +98,7 @@ const PageHeader = ({
 
       {/* Divider */}
 
-      <div className="mt-8 h-px bg-[#98cacb]" />
+      <div className="mt-8 h-px bg-[#9EC73A]" />
 
     </section>
   );

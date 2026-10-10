@@ -1,18 +1,18 @@
 export const COLORS = {
-  primary: "#38C85A",
-  primaryDark: "#2DB84F",
+  primary: "#9EC73A",
+  primaryDark: "#222062",
 
   background: "#FFFFFF",
 
   white: "#FFFFFF",
 
-  border: "#DCE6F5",
+  border: "#E7E9F0",
 
-  text: "#17223B",
+  text: "#222062",
 
   subtitle: "#6B7280",
 
-  success: "#38C85A",
+  success: "#9EC73A",
 
   danger: "#EF4444",
 };

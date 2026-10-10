@@ -33,9 +33,9 @@ const PatientRow = ({ patient, onDeleteSuccess }) => {
   };
 
   return (
-    <tr className="bg-white text-right shadow-sm transition hover:bg-[#F8FAF9]">
+    <tr className="bg-white text-right shadow-sm transition hover:bg-[#F5F7EC]">
       {/* Full Name */}
-      <td className="rounded-r-2xl px-6 py-5 font-medium text-[#2F2F2F]">
+      <td className="rounded-r-2xl px-6 py-5 font-medium text-[#222062]">
         {patient.fullName || "-"}
       </td>
 
@@ -70,7 +70,7 @@ const PatientRow = ({ patient, onDeleteSuccess }) => {
           {/* View Details Link */}
           <Link
   to={`/doctor/patient/${patient._id}`}
-  className="flex items-center gap-1.5 rounded-xl px-3 py-2 font-medium text-[#35C759] transition hover:bg-[#EDF8F2] active:scale-95"
+  className="flex items-center gap-1.5 rounded-xl px-3 py-2 font-medium text-[#9EC73A] transition hover:bg-[#F5F7EC] active:scale-95"
 >
             <Eye size={18} />
             <span>عرض</span>

@@ -120,7 +120,7 @@ const handleSubmit = async (e) => {
               h-14
               w-full
               rounded-xl
-              bg-[#4FA0B7]
+              bg-[#222062]
               text-white
               text-lg
               font-semibold
@@ -181,7 +181,7 @@ const PasswordInput = ({
           pl-20
           text-right
           outline-none
-          focus:border-[#4FA0B7]
+          focus:border-[#222062]
         "
       />
 

@@ -49,7 +49,7 @@ const TeamLeaderSidebar = () => {
   }, []);
 
   return (
-    <aside dir="rtl" className="sticky top-0 h-screen w-[320px] shrink-0 border-l border-[#E6F2EC] bg-[#E4EFF3] px-6 py-8 shadow-sm">
+    <aside dir="rtl" className="sticky top-0 h-screen w-[320px] shrink-0 border-l border-[#E7E9F0] bg-[#F5F7EC] px-6 py-8 shadow-sm">
       <div className="flex h-full flex-col">
         <div className="mb-10 flex justify-center">
           <img src="/logo2.png" alt="Recovery" className="w-36 object-contain" />
@@ -60,37 +60,37 @@ const TeamLeaderSidebar = () => {
           <NavLink
             to="/team-leader"
             end
-            className={({ isActive }) => `flex h-14 w-full items-center gap-3 rounded-2xl px-5 text-lg font-semibold transition-all duration-200 ${isActive ? "bg-[#4FA0B7] text-white" : "text-[#2F2F2F] hover:bg-[#22758d]"}`}
+            className={({ isActive }) => `flex h-14 w-full items-center gap-3 rounded-2xl px-5 text-lg font-semibold transition-all duration-200 ${isActive ? "bg-[#222062] text-white" : "text-[#222062] hover:bg-[#1b1950]"}`}
           >
             <ClipboardList size={22} />
             <span>التقارير المعلقة</span>
           </NavLink>
           <NavLink
             to="/team-leader/doctors"
-            className={({ isActive }) => `flex h-14 w-full items-center gap-3 rounded-2xl px-5 text-lg font-semibold transition-all duration-200 ${isActive ? "bg-[#4FA0B7] text-white" : "text-[#2F2F2F] hover:bg-[#22758d]"}`}
+            className={({ isActive }) => `flex h-14 w-full items-center gap-3 rounded-2xl px-5 text-lg font-semibold transition-all duration-200 ${isActive ? "bg-[#222062] text-white" : "text-[#222062] hover:bg-[#1b1950]"}`}
           >
             <Users size={22} />
             <span>أطباء الفريق</span>
           </NavLink>
           <NavLink
             to="/team-leader/patients"
-            className={({ isActive }) => `flex h-14 w-full items-center gap-3 rounded-2xl px-5 text-lg font-semibold transition-all duration-200 ${isActive ? "bg-[#4FA0B7] text-white" : "text-[#2F2F2F] hover:bg-[#22758d]"}`}
+            className={({ isActive }) => `flex h-14 w-full items-center gap-3 rounded-2xl px-5 text-lg font-semibold transition-all duration-200 ${isActive ? "bg-[#222062] text-white" : "text-[#222062] hover:bg-[#1b1950]"}`}
           >
             <UserRound size={22} />
             <span>مستفيدي الفريق</span>
           </NavLink>
         </nav>
 
-        <div className="rounded-[28px] border border-[#E8F2EC] bg-white p-6 shadow-sm">
-          <h3 className="mb-6 text-lg font-bold text-[#22758d]">إحصائيات الفريق</h3>
+        <div className="rounded-[28px] border border-[#E7E9F0] bg-white p-6 shadow-sm">
+          <h3 className="mb-6 text-lg font-bold text-[#1b1950]">إحصائيات الفريق</h3>
           <div className="space-y-5 text-base text-gray-600">
             <div className="flex items-center justify-between border-b border-gray-100 pb-3">
               <span>أعضاء الفريق</span>
-              <span className="font-bold text-[#22758d]">{stats.doctors}</span>
+              <span className="font-bold text-[#1b1950]">{stats.doctors}</span>
             </div>
             <div className="flex items-center justify-between border-b border-gray-100 pb-3">
               <span>مستفيدي الفريق</span>
-              <span className="font-bold text-[#22758d]">{stats.patients}</span>
+              <span className="font-bold text-[#1b1950]">{stats.patients}</span>
             </div>
             <div className="flex items-center justify-between">
               <span>طلبات قيد الانتظار</span>

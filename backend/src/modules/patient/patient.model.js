@@ -83,6 +83,12 @@ const patientSchema = new mongoose.Schema(
       type: String,
     },
 
+    programName: {
+      type: String,
+      enum: ["منزل منتصف الطريق", "الرعايه اللاحقه"],
+      trim: true,
+    },
+
     doctor: {
       type: mongoose.Schema.Types.ObjectId,
       ref: "User",

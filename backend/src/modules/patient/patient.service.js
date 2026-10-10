@@ -24,7 +24,7 @@ class PatientService {
     );
   }
 
-  async getAll(user, search, page = 1, limit = 15) {
+  async getAll(user, search, page = 1, limit = 15, programName) {
   const query = {};
 
   // Doctor can only see his patients
@@ -43,6 +43,11 @@ class PatientService {
     query.doctor = {
       $in: doctorIds,
     };
+  }
+
+  // Filter patients by the program recorded on their pre or post reports.
+  if (programName && programName !== "all") {
+    query.programName = programName;
   }
 
   // Search by name or national ID

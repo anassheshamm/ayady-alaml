@@ -25,7 +25,7 @@ const TeamPatientsPage = () => {
       ) : (
         <div className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm">
           <table className="w-full">
-            <thead className="bg-[#4FA0B7]/30">
+            <thead className="bg-[#9EC73A]/30">
               <tr className="text-right text-gray-600">
                 <th className="px-6 py-5 font-semibold">رقم الهوية</th>
                 <th className="px-6 py-5 font-semibold">اسم المستفيد</th>
@@ -38,7 +38,7 @@ const TeamPatientsPage = () => {
                 patients.map((patient) => (
                   <tr key={patient._id} className="border-t transition hover:bg-gray-50">
                     <td className="px-6 py-5 text-gray-700">{patient.nationalId}</td>
-                    <td className="px-6 py-5 font-bold text-[#4FA0B7]">
+                    <td className="px-6 py-5 font-bold text-[#222062]">
                       {patient.firstName} {patient.lastName}
                     </td>
                     <td className="px-6 py-5 text-gray-700">
@@ -48,7 +48,7 @@ const TeamPatientsPage = () => {
                       <div className="flex justify-center">
                         <button
                           onClick={() => navigate(`/team-leader/patient/${patient._id}`)}
-                          className="rounded-lg bg-gray-100 p-2 text-gray-600 transition hover:bg-[#EDF8F2] hover:text-[#247C5A]"
+                          className="rounded-lg bg-gray-100 p-2 text-gray-600 transition hover:bg-[#F5F7EC] hover:text-[#222062]"
                         >
                           <Eye size={20} />
                         </button>

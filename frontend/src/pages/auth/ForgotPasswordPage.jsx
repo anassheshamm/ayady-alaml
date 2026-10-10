@@ -53,7 +53,7 @@ const handleSubmit = async (e) => {
         </div>
         </div>
 
-        <h1 className="text-center text-5xl font-bold text-[#111827]">
+        <h1 className="text-center text-5xl font-bold text-[#222062]">
           نسيت كلمة المرور
         </h1>
 
@@ -62,7 +62,7 @@ const handleSubmit = async (e) => {
         </p>
 
         {sent ? (
-          <div className="mt-10 rounded-xl bg-green-50 p-5 text-center text-[#4FA0B7]">
+          <div className="mt-10 rounded-xl bg-green-50 p-5 text-center text-[#222062]">
             تم إرسال رابط إعادة تعيين كلمة المرور إلى بريدك الإلكتروني.
           </div>
         ) : (
@@ -97,9 +97,9 @@ const handleSubmit = async (e) => {
                     pl-12
                     text-right
                     outline-none
-                    focus:border-[#4FA0B7]
+                    focus:border-[#222062]
                     focus:ring-2
-                    focus:ring-[#4FA0B7]/10
+                    focus:ring-[#222062]/10
                   "
                 />
 
@@ -113,12 +113,12 @@ const handleSubmit = async (e) => {
                 h-14
                 w-full
                 rounded-xl
-                bg-[#4FA0B7]
+                bg-[#222062]
                 text-lg
                 font-semibold
                 text-white
                 transition
-                hover:bg-[#4FA0B7]/60
+                hover:bg-[#222062]/60
                 disabled:bg-gray-300
               "
             >
@@ -132,7 +132,7 @@ const handleSubmit = async (e) => {
         <div className="mt-8 text-center">
           <Link
             to="/login"
-            className="font-medium text-[#4FA0B7] hover:underline"
+            className="font-medium text-[#222062] hover:underline"
           >
             العودة إلى تسجيل الدخول
           </Link>
