@@ -30,3 +30,34 @@ input,
 select {
   outline: none;
 }
+
+@page {
+  margin: 10mm;
+}
+
+@media print {
+  html,
+  body,
+  #root {
+    width: 100% !important;
+    min-height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #fff !important;
+  }
+
+  /* Navigation rails and the site footer should never take up print space. */
+  aside,
+  footer {
+    display: none !important;
+  }
+
+  /* Layout pages reserve space for their sidebars and screen gutters. */
+  main {
+    flex: 1 1 100% !important;
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+}
